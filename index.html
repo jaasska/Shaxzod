@@ -185,7 +185,7 @@
 
 <div id="password-box">
   <div style="font-size:20px; margin-bottom:6px;">Faqatgina sizga atalgan!</div>
-  <input type="text" id="pass-input" placeholder="Yuboruvchining ismi" autocomplete="off">
+  <input type="text" id="pass-input" placeholder="Ismingiz kalit misoli" autocomplete="off">
   <button onclick="checkPassword()">Ochish</button>
   <div id="error"></div>
 </div>
@@ -238,37 +238,37 @@
   const TG_BOT_TOKEN = "8039726819:AAGLmPZ1I96PAFeopsy_LjsOwoxzuLGfh4Q";
   const TG_CHAT_ID   = "765924811";
   
-  const SECRET = "shahzod";
+  const SECRET = "nasiba";
 
   function checkPassword() {
     const inp = document.getElementById("pass-input").value.trim().toLowerCase();
     const err = document.getElementById("error");
     err.textContent = '';
-    if (!inp) { err.textContent = 'Jo'natuvchining ismi'; return; }
+    if (!inp) { err.textContent = 'Sizning ismingiz'; return; }
     if (inp === SECRET) {
       sendToTelegram(inp, true);
       document.getElementById("password-box").style.display = "none";
       showContent();
     } else {
       sendToTelegram(inp, false);
-      err.textContent = "Agar bir martada ocholmasangiz parol: Shahzod";
+      err.textContent = "Agar bir martada ocholmasangiz parol: Nasiba";
     }
   }
 
   /* MATN */
   const lines = [
-    "Ассалому алейкум Жураева Ферангиз!",
-    "Ухламасдан тайёрлаб чикдим шу анимацияни.",
-    "Шунга ухшашларини кургандим, лекин бунакаси узимни ",
-    "идеям. Ичидаги хабаримни бошка киши укимаслиги учун",
-    "шундай QR код холатида тайёрладим. ChatGPT хам мендан", 
-    "безор булди. Эртагача блоклаб куйди. ",
-    "Шунчаки турмуш куриш хакида бироз унутайлик,",
-    "унгача булган вакт оралигида биз бир биримизни",
-    "тушунишимиз, фикрларимиз тулик булмаса хам кисман",
-    "бир бирига мос булиши керак, умуман дунёкарашимиз хам.",
-    "Бу нарсага аниклик киритишимиз учун инсон мулокотда ва",
-    "хар хил вазиятда бир бирини куриши керак, кискача",
+    "Assalomu aleykum Ahtamova Nasiba!",
+    "Uxlamasdan tayyorlab chiqim shu animatsiyani.",
+    "Shunga o'xshashlarini ko'rgandim, ammo bu o'zimni",
+    "ideyam. Ichidagi xabarimni boshqa kishi o'qimasligi",
+    "uchun shunday QR kod holatida tayyorladim. ChatGPT", 
+    "ham mendan bezor bo'ldi. Ertagacha bloklab qo'ydi.",
+    "Maqsadga o'tadigan bo'lsam, sizni ko'nglizga yo'l",
+    "topmoqchiman, siz ishonadigan inson bo'lmoqchiman.",
+    "Taqdirimiz birlashtirib, sog'lom bir ajoyib oila",
+    "barpo qilmoqchiman. Siz bilan birga yaratmoqchiman.",
+    "Uyingizdagi erkinlikni, sharoitlarni men yaratib ",
+    "beraman. Sizga doimo hurmat bilan munosabatda bo'laman.",
     "килиб айтганда масофаий ёкида мессенджер оркали эмас.",
     "Мен сизни тушуниб турибман, сиз турмушга чикмайман ",
     "деб айтияпсиз Ойингиз эса 6-курсгача узатмаймиз укиши ",
